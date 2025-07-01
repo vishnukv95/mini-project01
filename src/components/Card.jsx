@@ -1,6 +1,15 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import {addToCart} from "../features/cartSlice"
 
 const Card = ({item}) => {
+  const dispatch = useDispatch()
+
+  const handleCart =()=>{
+      dispatch(addToCart(item))
+  }
+
+  
   return (
     <div className='flex flex-col m-3 p-3 bg-white  rounded-lg shadow'>
      
@@ -17,7 +26,7 @@ const Card = ({item}) => {
          <p className='text-gray-950 font-bold text-base m-2'>&#8377; {item.price}</p>
         </div>
         <div className='mt-2'>
-           <button className='w-full text-white bg-gradient-to-l
+           <button onClick={handleCart} className='w-full text-white bg-gradient-to-l
             from-green-500 via-green-600 to-green-600 
             hover:bg-gradient-to-br focus:ring-4 focus:outline-none 
             focus:ring-green-300 dark:focus:ring-green-800 

@@ -41,7 +41,10 @@ const {isLoggedin,currentUser}= useSelector((state)=>state.user)
           </ul>
         </nav>
       </div>
-      <div className="flex justify-center items-center ">
+      <div className="flex justify-center items-center gap-1 ">
+        <div>
+          <h2 className="bg-green-600 p-1 rounded-lg text-white" ><a href="/Cart">Cart</a></h2>
+        </div>
        
        { isLoggedin ?
         (<div className="flex justify-center items-center gap-1">

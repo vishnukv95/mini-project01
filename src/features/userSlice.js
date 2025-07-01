@@ -4,7 +4,8 @@ import { createSlice,  } from "@reduxjs/toolkit";
 const initialState = {
     user: JSON.parse(localStorage.getItem("user")) || [],
     isLoggedin:JSON.parse(localStorage.getItem("isLoggedin")) || false,
-    currentUser:JSON.parse(localStorage.getItem("currentUser")) || null
+    currentUser:JSON.parse(localStorage.getItem("currentUser")) || null,
+    admin:JSON.parse(localStorage.getItem("admin")) || false,
 }
 
  const userSlice = createSlice({
@@ -31,12 +32,15 @@ const initialState = {
 
         },
         validateLogin:(state,action)=>{
+           
             const userExists = state.user.find((user)=>user.email === action.payload.email && user.password === action.payload.password)
             if(userExists){
               state.isLoggedin = true
               state.currentUser = userExists
+              state.admin = userExists.role=== "admin"
               localStorage.setItem("currentUser",JSON.stringify(state.currentUser))
               localStorage.setItem("isLoggedin", true)
+              localStorage.setItem("admin",JSON.stringify(true))
               
             }else{
                state.isLoggedin =false
@@ -48,6 +52,8 @@ const initialState = {
            localStorage.removeItem("isLoggedin")
            state.currentUser = null   
            localStorage.removeItem("currentUser")
+           state.admin= false
+           
         }
     }
 })

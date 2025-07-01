@@ -2,7 +2,10 @@ import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUser,validateLogin } from '../features/userSlice';
 import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
+
+import toast, { Toaster } from 'react-hot-toast';
+
+
 
 const Form = () => {
   const dispatch = useDispatch()
@@ -21,14 +24,21 @@ const Form = () => {
   const handleFormSubmit =(data)=>{
     dispatch(setUser(data))
     dispatch(validateLogin(data))
+    toast("Registration successful")
     
    }
 
-    useEffect(()=>{
-           if(isLoggedin){
+   setTimeout(() => {
+     if(isLoggedin){
                navigate('/')
            }
-         })
+   },1500);
+
+    // useEffect(()=>{
+    //        if(isLoggedin){
+    //            navigate('/')
+    //        }
+    //      })
 
   return (
     <form className='flex flex-col gap-7 max-w-sm mx-auto bg-inherit p-2 ' onSubmit={handleSubmit(handleFormSubmit)}>
@@ -103,6 +113,14 @@ const Form = () => {
          via-green-600 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none
           focus:ring-green-300 dark:focus:ring-green-800 
            rounded-lg font-bold px-5 py-2.5 text-center me-2 mb-2 shadow' type="submit" />
+           <Toaster  toastOptions={{
+    style: {
+      background: '#16a34a', 
+      color: '#ffffff',
+      fontWeight: 'bold',
+      borderRadius: '8px',
+      padding: '12px 16px',
+    },}}  />
        </div>
 <div className="flex items-center ">
   <div className="flex-grow border-t border-gray-300"></div>
