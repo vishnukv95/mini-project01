@@ -1,0 +1,402 @@
+[
+  {
+    "id": 1,
+    "name": "Masala Dosa",
+    "category": "South Indian",
+    "price": 60,
+    "veg": true,
+    "image": "https://images.unsplash.com/photo-1668236543090-82eba5ee5976?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bWFzYWxhJTIwZG9zYXxlbnwwfHwwfHx8MA%3D%3D"
+  },
+  {
+    "id": 2,
+    "name": "Chicken Biryani",
+    "category": "Hyderabadi",
+    "price": 150,
+    "veg": false,
+    "image": "https://www.thespruceeats.com/thmb/XDBL9gA6A6nYWUdsRZ3QwH084rk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SES-chicken-biryani-recipe-7367850-hero-A-ed211926bb0e4ca1be510695c15ce111.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Pav Bhaji",
+    "category": "Street Food",
+    "price": 70,
+    "veg": true,
+    "image": "https://img-cdn.publive.online/fit-in/1200x675/sanjeev-kapoor/media/media_files/2025/01/18/plEiJWGu2aaed4zgDkIj.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Butter Chicken",
+    "category": "North Indian",
+    "price": 180,
+    "veg": false,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYU7bkgqtucD8ngwFxlIK-rDPzBR4k-ZIkTA&s"
+  },
+  {
+    "id": 5,
+    "name": "Paneer Butter Masala",
+    "category": "North Indian",
+    "price": 140,
+    "veg": true,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-mIuogYlqq0c5enxTLvyylqkakB86Y3u6qQ&s"
+  },
+  {
+    "id": 6,
+    "name": "Vada Pav",
+    "category": "Street Food",
+    "price": 30,
+    "veg": true,
+    "image": "https://vanitascorner.com/wp-content/uploads/2020/10/Vada-Pav.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Fish Curry",
+    "category": "Kerala",
+    "price": 160,
+    "veg": false,
+    "image": "https://images.unsplash.com/photo-1626508035297-0cd27c397d67?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RmlzaCUyMEN1cnJ5fGVufDB8fDB8fHww"
+  },
+  {
+    "id": 8,
+    "name": "Chole Bhature",
+    "category": "Punjabi",
+    "price": 90,
+    "veg": true,
+    "image": "https://media.istockphoto.com/id/1328524499/photo/katlambe-chole.jpg?b=1&s=612x612&w=0&k=20&c=qGJwW1Ys9cDgcCQTJQdCMJcJaWWK5FiHs7th7eyq48Y="
+  },
+  {
+    "id": 9,
+    "name": "Idli Sambar",
+    "category": "South Indian",
+    "price": 50,
+    "veg": true,
+    "image": "https://images.pexels.com/photos/20422128/pexels-photo-20422128.jpeg"
+  },
+  {
+    "id": 10,
+    "name": "Mutton Rogan Josh",
+    "category": "Kashmiri",
+    "price": 220,
+    "veg": false,
+    "image": "https://images.pexels.com/photos/9609846/pexels-photo-9609846.jpeg"
+  },
+  {
+    "id": 11,
+    "name": "Samosa",
+    "category": "Snack",
+    "price": 20,
+    "veg": true,
+    "image": "https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg"
+  },
+  {
+    "id": 12,
+    "name": "Aloo Paratha",
+    "category": "North Indian",
+    "price": 50,
+    "veg": true,
+    "image": "https://media.istockphoto.com/id/1951940755/photo/close-up-image-of-indian-breakfast-dish-buffet-triangular-slices-of-aloo-parathas-on-white.jpg?b=1&s=612x612&w=0&k=20&c=G2IJK3oO9g3dWOZT-VIoyCjLIPbNr5E7SMYZOFrZ5EI="
+  },
+  {
+    "id": 13,
+    "name": "Tandoori Chicken",
+    "category": "North Indian",
+    "price": 190,
+    "veg": false,
+    "image": "https://images.pexels.com/photos/20371525/pexels-photo-20371525.jpeg"
+  },
+  {
+    "id": 14,
+    "name": "Pani Puri",
+    "category": "Street Food",
+    "price": 25,
+    "veg": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Pani_Puri1.JPG/960px-Pani_Puri1.JPG"
+  },
+  {
+    "id": 15,
+    "name": "Dhokla",
+    "category": "Gujarati",
+    "price": 40,
+    "veg": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Dhokla_on_Gujrart.jpg/250px-Dhokla_on_Gujrart.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Rajma Chawal",
+    "category": "North Indian",
+    "price": 80,
+    "veg": true,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFboDTZnED9Ozd4O6DFlxTgf3GFjuFrUv2Gw&s"
+  },
+  {
+    "id": 17,
+    "name": "Palak Paneer",
+    "category": "North Indian",
+    "price": 130,
+    "veg": true,
+    "image": "https://images.pexels.com/photos/31249589/pexels-photo-31249589.jpeg"
+  },
+  {
+    "id": 18,
+    "name": "Mysore Pak",
+    "category": "Dessert",
+    "price": 60,
+    "veg": true,
+    "image": "https://media.istockphoto.com/id/1441587051/photo/mysorepak-indian-famous-traditional-sweet-closeup-with-selective-focus-and-blur.jpg?b=1&s=612x612&w=0&k=20&c=cVvvXwxr45_NNa87ctQdNMQKcvLKnungxpqUw9FgbMo="
+  },
+  {
+    "id": 19,
+    "name": "Rasgulla",
+    "category": "Dessert",
+    "price": 40,
+    "veg": true,
+    "image": "https://media.istockphoto.com/id/1283542929/photo/indian-rasgulla-or-dry-rosogulla-dessert-sweet-served-in-a-bowl.jpg?b=1&s=612x612&w=0&k=20&c=79JFXcQ2Vc7zOagfcLRr42vVUudksKxJpWxXkoUpbb8="
+  },
+  {
+    "id": 20,
+    "name": "Lassi",
+    "category": "Beverage",
+    "price": 30,
+    "veg": true,
+    "image": "https://media.istockphoto.com/id/1488738139/photo/sweet-lassi.jpg?b=1&s=612x612&w=0&k=20&c=s0zk4wyIVxqsLaE_UwAkM6jE1u_R2D0kkdb0rkXzHEo="
+  },
+  {
+    "id": 21,
+    "name": "Gulab Jamun",
+    "category": "Dessert",
+    "price": 45,
+    "veg": true,
+    "image": "https://images.pexels.com/photos/11887844/pexels-photo-11887844.jpeg"
+  },
+  {
+    "id": 22,
+    "name": "Dosa",
+    "category": "South Indian",
+    "price": 50,
+    "veg": true,
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Dosa_at_Sri_Ganesha_Restauran%2C_Bangkok_%2844570742744%29.jpg/1200px-Dosa_at_Sri_Ganesha_Restauran%2C_Bangkok_%2844570742744%29.jpg"
+ },
+  {
+    "id": 23,
+    "name": "Egg Curry",
+    "category": "Kerala",
+    "price": 120,
+    "veg": false,
+    "image": "https://www.spicebangla.com/wp-content/uploads/2024/08/Egg-Masala-Curry-900x506.webp"
+  },
+  {
+    "id": 24,
+    "name": "Bhindi Fry",
+    "category": "North Indian",
+    "price": 90,
+    "veg": true,
+    "image": "https://yourfoodfantasy.com/wp-content/webpc-passthru.php?src=https://yourfoodfantasy.com/wp-content/uploads/2017/03/bhindi-masala-recipe-your-food-fantasy.jpg&nocache=1"
+  },
+  {
+    "id": 25,
+    "name": "Tandoori Roti",
+    "category": "Bread",
+    "price": 20,
+    "veg": true,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROkdDh0kPdNarlULiJoCbZ4HQXVIHNgqKtRg&s"
+  },
+  {
+    "id": 26,
+    "name": "Mango Lassi",
+    "category": "Beverage",
+    "price": 35,
+    "veg": true,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS22285ztkaIeZOUAzL_gF1vuYXYMbBgK1EYA&s"
+  },
+  {
+    "id": 27,
+    "name": "Kathi Roll",
+    "category": "Snack",
+    "price": 70,
+    "veg": false,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxI96H61vMmSMoQoB49ktHBJGQhwNB9v2Nlg&s"
+  },
+  {
+    "id": 28,
+    "name": "Malai Kofta",
+    "category": "Mughlai",
+    "price": 160,
+    "veg": true,
+    "image": "https://www.chefkunalkapur.com/wp-content/uploads/2023/07/DSC01036-1300x731.jpg?v=1689321415"
+  },
+  {
+    "id": 29,
+    "name": "Mango Pickle",
+    "category": "Condiment",
+    "price": 15,
+    "veg": true,
+    "image": "https://www.yummytummyaarthi.com/wp-content/uploads/2015/01/1-11.jpg"
+  },
+  {
+    "id": 30,
+    "name": "Chicken Tikka",
+    "category": "Tandoori",
+    "price": 160,
+    "veg": false,
+    "image": "https://www.thespruceeats.com/thmb/1ASSnPUMf1ZqROSByxvDpWi07Bg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/chicken-tikka-recipe-1957388-Final-5bb021874cedfd0026da89fd.jpg"
+  },
+  {
+    "id": 31,
+    "name": "Roti",
+    "category": "Bread",
+    "price": 10,
+    "veg": true,
+    "image": "https://www.simplyrecipes.com/thmb/kfKdjryQIBH-MkGQXqN9mSfu-Yc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Simply-Recipes-Roti-LEAD-3-38a1295fbb884aaabd42a34bcad9ea82.jpg"
+  },
+  {
+    "id": 32,
+    "name": "Pesarattu",
+    "category": "South Indian",
+    "price": 55,
+    "veg": true,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ73jwyKi9chdSzpRHOt12IuKTQ5eJ01ohCAg&s"
+  },
+  {
+    "id": 33,
+    "name": "Poha",
+    "category": "Breakfast",
+    "price": 40,
+    "veg": true,
+    "image": "https://www.indianhealthyrecipes.com/wp-content/uploads/2020/01/poha.jpg"
+  },
+  {
+    "id": 34,
+    "name": "Kheer",
+    "category": "Dessert",
+    "price": 50,
+    "veg": true,
+    "image": "https://www.cookwithmanali.com/wp-content/uploads/2017/06/Indian-Rice-Kheer-500x375.jpg"
+  },
+  {
+    "id": 35,
+    "name": "Keema Naan",
+    "category": "Bread",
+    "price": 60,
+    "veg": false,
+    "image": "https://www.harighotra.co.uk/images/recipes/Oct16/keema_naan_landscape.jpg"
+  },
+  {
+    "id": 36,
+    "name": "Chana Masala",
+    "category": "North Indian",
+    "price": 110,
+    "veg": true,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShRpQcWVj2oxVVigAbnEWXbdNoIRGMmDScAA&s"
+  },
+  {
+    "id": 37,
+    "name": "Beef Fry",
+    "category": "Kerala",
+    "price": 200,
+    "veg": false,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkdz6e1dTaJJnaVrgtL-CyxTMSRQGoSAIn9Q&s"
+  },
+  {
+    "id": 38,
+    "name": "Coconut Chutney",
+    "category": "Side Dish",
+    "price": 15,
+    "veg": true,
+    "image": "https://static.toiimg.com/thumb/53540257.cms?width=1200&height=900"
+  },
+  {
+    "id": 39,
+    "name": "Pongal",
+    "category": "South Indian",
+    "price": 50,
+    "veg": true,
+    "image": "https://www.spiceindiaonline.com/wp-content/uploads/2014/01/Ven-Pongal-3-768x512.jpg"
+  },
+  {
+    "id": 40,
+    "name": "Vegetable Pulao",
+    "category": "Rice Dish",
+    "price": 100,
+    "veg": true,
+    "image": "https://i0.wp.com/myvegetarianroots.com/wp-content/uploads/2020/02/DSC_0119.jpeg?fit=1920%2C1276&ssl=1"
+  },
+  {
+    "id": 41,
+    "name": "Shrimp Curry",
+    "category": "Coastal",
+    "price": 180,
+    "veg": false,
+    "image": "https://i.ytimg.com/vi/aAy3nW9SiPA/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLChLFl1tZ1hhmXdGknbooP7qNLVsA"
+  },
+  {
+    "id": 42,
+    "name": "Dahi Puri",
+    "category": "Chaat",
+    "price": 30,
+    "veg": true,
+    "image": "https://cookingfromheart.com/wp-content/uploads/2021/08/Dahi-Puri-Prep-10.jpg"
+  },
+  {
+    "id": 43,
+    "name": "Sabudana Khichdi",
+    "category": "Maharashtrian",
+    "price": 70,
+    "veg": true,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRodo0a6TYgFdd4xYcGuiUsWZaZYlU3_UjGPQ&s"
+  },
+  {
+    "id": 44,
+    "name": "Chicken 65",
+    "category": "South Indian",
+    "price": 140,
+    "veg": false,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2LkzTXMIom6MCm4svSkrzo6Vc0YeY8O8gpw&s"
+  },
+  {
+    "id": 45,
+    "name": "Egg Fried Rice",
+    "category": "Indo-Chinese",
+    "price": 110,
+    "veg": false,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSeyNBUBooHqQRxDBAOTzk1BYYG-y-PR7oKA&s"
+  },
+  {
+    "id": 46,
+    "name": "Paneer Tikka",
+    "category": "Tandoori",
+    "price": 140,
+    "veg": true,
+    "image": "https://www.ruchifoodline.com/recipes//cdn/recipes/paneer-tikka.jpg"
+  },
+  {
+    "id": 47,
+    "name": "Veg Hakka Noodles",
+    "category": "Indo-Chinese",
+    "price": 100,
+    "veg": true,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1kSQ_V8xhlA9H27tp-LCFgPJxgL6-bbh2vA&s"
+  },
+  {
+    "id": 48,
+    "name": "Sweet Lassi",
+    "category": "Beverage",
+    "price": 30,
+    "veg": true,
+    "image": "https://static.wixstatic.com/media/bb82ca_6f297bf80c8c428683c7fc14f3abc4ec~mv2.png/v1/fill/w_568,h_378,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/bb82ca_6f297bf80c8c428683c7fc14f3abc4ec~mv2.png"
+  },
+  {
+    "id": 49,
+    "name": "Thali",
+    "category": "Combo",
+    "price": 180,
+    "veg": true,
+    "image": "https://nfcihospitality.com/wp-content/uploads/2024/08/North-Indias-Veg.-Thali-1024x683.jpg"
+  },
+  {
+    "id": 50,
+    "name": "Dal Tadka",
+    "category": "North Indian",
+    "price": 90,
+    "veg": true,
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSD4dKcPnFlczSSGURgI9-sPaHCHNteNbYAyA&s"
+  }
+]
