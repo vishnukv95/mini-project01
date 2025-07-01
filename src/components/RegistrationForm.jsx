@@ -1,19 +1,34 @@
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
-import { setUser } from '../features/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { setUser,validateLogin } from '../features/userSlice';
+import { useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Form = () => {
   const dispatch = useDispatch()
+  const navigate = useNavigate()
+  const isLoggedin = useSelector((state)=>state.user.isLoggedin)
+  
  const { 
     register,
     handleSubmit,
     formState: { errors },
+    watch,
   } = useForm();
+
+  const password = watch('password')
 
   const handleFormSubmit =(data)=>{
     dispatch(setUser(data))
-    console.log(data)
-  }
+    dispatch(validateLogin(data))
+    
+   }
+
+    useEffect(()=>{
+           if(isLoggedin){
+               navigate('/')
+           }
+         })
 
   return (
     <form className='flex flex-col gap-7 max-w-sm mx-auto bg-inherit p-2 ' onSubmit={handleSubmit(handleFormSubmit)}>
@@ -32,7 +47,7 @@ const Form = () => {
            {required:true,
            maxLength:{value:20,message:"Maximum length is 20"},
            minLength:{value:3,message:"Minimum length is 3"}})} placeholder='Enter Name' />
-           {errors.firstname && <p className='text-red-600 bg-white text-center rounded-2xl mt-1'>{errors.firstname.message}</p>}
+           {errors.firstname && <p className='text-red-600 bg-white text-center text-sm rounded-lg mt-1'>{errors.firstname.message}</p>}
       </div>
       <div>
          <input className='bg-gray-100 border border-green-700 text-gray-900 text-sm rounded-lg 
@@ -52,7 +67,7 @@ const Form = () => {
             required:true,
             pattern:{value:/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,message:"Invalid email format"}
            })} />
-           {errors.email && <p className='text-red-600 bg-white text-center rounded-2xl mt-2'>{errors.email.message}</p>}
+           {errors.email && <p className='text-red-600 bg-white text-center text-sm rounded-lg mt-2'>{errors.email.message}</p>}
       </div>
 
       {/* For password */}
@@ -65,19 +80,23 @@ const Form = () => {
            {...register("password",
            {
             required:true,
-            pattern:/^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z0-9]{8,}$/,
-            message:"Password should be 8 charectors and include 1 letter and 1 number"})
+            pattern:{
+              value:/^(?=.*[a-zA-Z])(?=.*\d)[a-zA-Z0-9]{8,}$/,
+            message:"Password should be 8 characters include 1 letter and 1 number"}})
             } />
          
-        {errors.password && <p className='text-white bg-red-400 text-sm rounded-2xl mt-5'>{errors.password.message}</p>}
+        {errors.password && <p className='text-red-600 bg-white text-center text-sm rounded-lg mt-2 p-1'>{errors.password.message}</p>}
     
        </div>
-           
-           
+           <div>
+              
            <input className='bg-gray-100 border border-green-700 text-gray-900 text-sm rounded-lg 
           w-full p-2.5  focus-outline-none focus-border-green-500 
           focus-ring-green-600 shadow'placeholder='Confirm password' type="password"
-           {...register("confirmPassword",{required:true})} />
+           {...register("confirmPassword",{required:true,validate: value => value == password || "Password do not match"})} />
+           {errors.confirmPassword && <p className='text-red-600 bg-white text-center text-sm rounded-lg mt-3 p-2'>{errors.confirmPassword.message}</p>}
+           </div>
+         
       </div>
        <div>
         <input className='text-white w-full border-2 bg-gradient-to-l from-green-500

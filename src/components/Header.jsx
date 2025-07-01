@@ -1,11 +1,12 @@
 import React from "react";
 import { useNavigate} from "react-router-dom";
+import { useSelector } from "react-redux";
 
 
 
 const Header = () => {
 const navigate = useNavigate()
-
+const {isLoggedin,currentUser}= useSelector((state)=>state.user)
  const handleSignUpClick=()=>{
   navigate('/Registration')
   }
@@ -42,9 +43,19 @@ const navigate = useNavigate()
       </div>
       <div className="flex justify-center items-center ">
        
-         <button onClick={handleLoginClick}  type="button" className="text-green-600  outline-2 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Log in</button>
-          <button onClick={handleSignUpClick}  type="button" className="text-white bg-gradient-to-l from-green-500 via-green-600 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Sign up</button>
-      </div>
+       { isLoggedin ?
+        (<div className="flex justify-center items-center gap-1">
+          <img className="h-8 " src="/usericon.svg" alt="" />
+          <h2 className="text-green-600 font-bold">{currentUser.firstname}</h2>
+          
+          </div> ) 
+
+        :
+
+        (<div className="flex justify-center items-center"> 
+          <button onClick={handleLoginClick}  type="button" className="text-green-600  outline-2 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Log in</button>
+          <button onClick={handleSignUpClick}  type="button" className="text-white bg-gradient-to-l from-green-500 via-green-600 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-green-300 dark:focus:ring-green-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Sign up</button></div>)}
+         </div>
     </header>
   );
 };
