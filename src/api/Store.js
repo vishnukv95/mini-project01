@@ -7,8 +7,9 @@ import  cartReducer from "../features/cartSlice"
 export const store= configureStore({
     reducer:{
         food:foodReducer,
-        user:useReducer,
+        users:useReducer,
         cart:cartReducer,
+    
     }
 })
 

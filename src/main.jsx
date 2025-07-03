@@ -7,9 +7,9 @@ import "./index.css";
 import App from "./App.jsx";
 
 const presetAdmin = () => {
-  const user = JSON.parse(localStorage.getItem("user")) || []
+  const users = JSON.parse(localStorage.getItem("users")) || []
 
-  const adminExists = user.find((user)=>user.role === "admin")
+  const adminExists = users.find((user)=>user.role === "admin")
 
 if(!adminExists){
   const admin={
@@ -18,7 +18,7 @@ if(!adminExists){
     password:"admin123",
     role:"admin"
   }
-  localStorage.setItem("user",JSON.stringify([...user,admin]))
+  localStorage.setItem("users",JSON.stringify([...users,admin]))
 }
 }
 

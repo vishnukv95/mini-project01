@@ -24,10 +24,10 @@ if(error){
 }
 
   return (
-    <div className='flex w-1440px'>
+    <div className='flex'>
 <Header/>
- <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3
-  lg:grid-cols-4 xl:grid-cols-5 gap-6 m-10 auto-rows-fr mt-22">
+ <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3
+  lg:grid-cols-4 xl:grid-cols-5 md:gap-2 m-10 auto-rows-fr mt-22">
     
 {
     food.map((item)=>{

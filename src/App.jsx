@@ -6,16 +6,18 @@ import Registration from './pages/Registration'
 import AdminPanel from './pages/AdminPanel'
 import AdminRoute from './components/AdminRoute'
 import Cart from './pages/Cart'
+import NoteAuthorised from './pages/NoteAuthorised'
 
 const App = () => {
   return (
-    <div className=''>
+    <div className='container mx-auto'>
 <Routes>
 <Route path='/' element={<Home/>}/>
 <Route path='/Login' element={<Login/>} />
 <Route path='/Registration' element={<Registration/>}/>
 <Route path='/AdminPanel' element={<AdminRoute><AdminPanel/></AdminRoute>}/>
 <Route path='/Cart' element={<Cart/>}/>
+<Route path='*' element={<NoteAuthorised/>}/>
 
 </Routes>
 

@@ -2,49 +2,52 @@ import { createSlice,  } from "@reduxjs/toolkit";
 
 
 const initialState = {
-    user: JSON.parse(localStorage.getItem("user")) || [],
+    users: JSON.parse(localStorage.getItem("users")) || [],
     isLoggedin:JSON.parse(localStorage.getItem("isLoggedin")) || false,
     currentUser:JSON.parse(localStorage.getItem("currentUser")) || null,
     admin:JSON.parse(localStorage.getItem("admin")) || false,
 }
 
  const userSlice = createSlice({
-    name: "user",
+    name: "users",
     initialState,
 
     reducers:{
 
-        setUser:(state,action)=>{
-            const existingUser = state.user.find((user)=>user.email === action.payload.email)
+        setUsers:(state,action)=>{
+            const existingUser = state.users.find((user)=>user.email === action.payload.email)
            if(!existingUser){
-             const newUser=[...state.user,action.payload]
-            state.user = newUser
-            state.currentUser = newUser
-            localStorage.setItem("user",JSON.stringify(state.user))
+             const newUser=state.users.push({...action.payload,role:"user"})
+             state.currentUser = newUser
+            localStorage.setItem("users",JSON.stringify(state.users))
             localStorage.setItem("currentUser",JSON.stringify(state.currentUser))
-            localStorage.setItem("isLoggedin", true)
+            localStorage.setItem("isLoggedin",JSON.stringify(true))
             
            }
         },
         removeUser:(state,action)=>{
-            state.user = state.user.filter((user)=> user.email !== action.payload);
-            localStorage.setItem("user",JSON.stringify(state.user))
+            state.users = state.users.filter((user)=> user.email !== action.payload);
+            localStorage.setItem("users",JSON.stringify(state.users))
 
         },
         validateLogin:(state,action)=>{
            
-            const userExists = state.user.find((user)=>user.email === action.payload.email && user.password === action.payload.password)
+            const userExists = state.users.find((user)=>user.email === action.payload.email && user.password === action.payload.password)
+            
             if(userExists){
+              const isAdmin= userExists.role === "admin"  
               state.isLoggedin = true
               state.currentUser = userExists
-              state.admin = userExists.role=== "admin"
+              state.admin=isAdmin
               localStorage.setItem("currentUser",JSON.stringify(state.currentUser))
               localStorage.setItem("isLoggedin", true)
-              localStorage.setItem("admin",JSON.stringify(true))
+              localStorage.setItem("admin",JSON.stringify(isAdmin))
+              
               
             }else{
-               state.isLoggedin =false
-               state.currentUser = null
+             state.isLoggedin = false
+              state.currentUser = null
+
             }
         },
         logOut:(state)=>{
@@ -58,5 +61,5 @@ const initialState = {
     }
 })
 
-export const {setUser,removeUser,validateLogin,currentUser,logOut}= userSlice.actions
+export const {setUsers,removeUser,validateLogin,logOut}= userSlice.actions
 export default userSlice.reducer

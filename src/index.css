@@ -1,3 +1,6 @@
 
 @import "tailwindcss";
 
+#root{
+    background-color: hsl(hue, saturation, lightness);
+}

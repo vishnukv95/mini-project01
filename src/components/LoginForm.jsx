@@ -7,7 +7,7 @@ const LoginForm = () => {
     const navigate = useNavigate()
     const [email,setEmail] = useState("")
     const [password,setPassword] = useState("")
-    const isLoggedin = useSelector((state)=>state.user.isLoggedin)
+    const isLoggedin = useSelector((state)=>state.users.isLoggedin)
     
     const dispatch = useDispatch()
     const onSubmitHandler =(e)=>{

@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
-import { setUser,validateLogin } from '../features/userSlice';
+import { setUsers,validateLogin } from '../features/userSlice';
 import { useNavigate } from 'react-router-dom';
 
 import toast, { Toaster } from 'react-hot-toast';
@@ -10,7 +10,7 @@ import toast, { Toaster } from 'react-hot-toast';
 const Form = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  const isLoggedin = useSelector((state)=>state.user.isLoggedin)
+  const isLoggedin = useSelector((state)=>state.users.isLoggedin)
   
  const { 
     register,
@@ -22,7 +22,7 @@ const Form = () => {
   const password = watch('password')
 
   const handleFormSubmit =(data)=>{
-    dispatch(setUser(data))
+    dispatch(setUsers(data))
     dispatch(validateLogin(data))
     toast("Registration successful")
     
