@@ -109,7 +109,7 @@ const Form = () => {
          
       </div>
        <div>
-        <input className='text-white w-full border-2 bg-gradient-to-l from-green-500
+        <input className='text-white cursor-pointer w-full border-2 bg-gradient-to-l from-green-500
          via-green-600 to-green-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none
           focus:ring-green-300 dark:focus:ring-green-800 
            rounded-lg font-bold px-5 py-2.5 text-center me-2 mb-2 shadow' type="submit" />

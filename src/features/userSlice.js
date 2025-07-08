@@ -26,9 +26,15 @@ const initialState = {
            }
         },
         removeUser:(state,action)=>{
-            state.users = state.users.filter((user)=> user.email !== action.payload);
-            localStorage.setItem("users",JSON.stringify(state.users))
+            const removeMail= action.payload
+            const userToRemove= state.users.find((user)=>user.email===removeMail)
 
+            if(userToRemove && userToRemove.role==="admin"  ){
+                return
+            }else{
+                state.users= state.users.filter((user)=>user.email !== removeMail)
+                localStorage.setItem("users",JSON.stringify(state.users))
+            }
         },
         validateLogin:(state,action)=>{
            
@@ -56,6 +62,7 @@ const initialState = {
            state.currentUser = null   
            localStorage.removeItem("currentUser")
            state.admin= false
+           localStorage.removeItem('filteredfood')
            
         }
     }

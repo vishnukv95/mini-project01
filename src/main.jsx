@@ -14,6 +14,7 @@ const presetAdmin = () => {
 if(!adminExists){
   const admin={
     firstname:"Admin",
+    lastname:"admin",
     email:"admin@byte.com",
     password:"admin123",
     role:"admin"
