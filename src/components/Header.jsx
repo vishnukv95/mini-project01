@@ -54,12 +54,12 @@ const handleSignUpClick=()=>{
               </a>
             </li>
             <li>
-              <a className="text-green-600" href="/">
+              <a className="text-green-600" href="/About">
                 About
               </a>
             </li>
             <li>
-              <a className="text-green-600" href="/">
+              <a className="text-green-600" href="/Contact">
                 Contact
               </a>
             </li>
@@ -114,8 +114,8 @@ const handleSignUpClick=()=>{
        {isMenuOpen && (
         <div className="absolute  top-16 right-4 bg-white dark:bg-zinc-800 dark:text-white rounded-lg shadow-lg flex flex-col gap-3 p-4 sm:hidden z-50">
           <a href="/" className="text-green-600 dark:text-white">Home</a>
-          <a href="/" className="text-green-600 dark:text-white">About</a>
-          <a href="/" className="text-green-600 dark:text-white">Contact</a>
+          <a href="/About" className="text-green-600 dark:text-white">About</a>
+          <a href="/Contact" className="text-green-600 dark:text-white">Contact</a>
           
           <a href="/Cart" className="text-green-600 dark:text-white">Cart</a>
            <hr className=" border-t-2 border-green-600" />

@@ -12,6 +12,8 @@ import Summary from './pages/Summary'
 import Footer from './components/Footer'
 import { useSelector } from 'react-redux'
 import { useEffect } from 'react'
+import About from './pages/About'
+import Contact from './pages/Contact'
 
 
 const App = () => {
@@ -36,6 +38,8 @@ const App = () => {
     <Route path='/Cart' element={<Cart/>}/>
     <Route path='*' element={<NotAuthorised/>}/>
     <Route path="/Summary" element={<Summary />} />
+    <Route path='/About' element={<About/>}/>
+    <Route path='/Contact' element={<Contact/>}/>
 
 
    </Routes>
