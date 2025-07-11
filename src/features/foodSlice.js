@@ -21,7 +21,7 @@ const foodSlice =createSlice({
     reducers:{
         filterItem:(state,action)=>{
             const filterInput = action.payload.toLowerCase()
-          if(!filterInput|| filterInput === "All"){
+          if(!filterInput|| filterInput === "all"){
             state.filtered = state.food
             localStorage.setItem("filteredfood",JSON.stringify(state.filtered))
           }else{
@@ -41,7 +41,7 @@ const foodSlice =createSlice({
             localStorage.setItem("filteredfood",JSON.stringify(state.filtered))
           },
           loadSavedFoods: (state, action) => {
-           state.food = action.payload;
+           
            state.filtered = action.payload;
         },
         updateItem:(state,action)=>{

@@ -48,8 +48,8 @@ if(error){
 
    <div className='container flex flex-col'>
 
-<div className='flex flex-col justify-evenly mt-2 p-1  gap-3 rounded-lg'>
-  <div className='flex justify-between rounded-lg shadow-lg dark:bg-zinc-800 p-2'>
+<div className=' flex flex-col justify-evenly mt-2 p-1  gap-3 rounded-lg'>
+  <div className='flex sticky top-24 justify-between rounded-lg shadow-lg dark:bg-zinc-800 p-2'>
       <select className=' font-bold border-none text-green-600' onChange={(e)=>dispatch(filterItem(e.target.value))} name="" id="">
   <option value="All">All Categories</option>
   <hr />
